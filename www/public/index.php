@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="top-bar">
+    <h2>Product List</h2>
+    <div>
+      <a href="add-product.html"><button>ADD</button></a>
+      <button id="delete-product-btn">MASS DELETE</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="product-item"><input type="checkbox" class="delete-checkbox">
+      <p>JVC200123</p><p>Acme DISC</p><p>1.00 $</p><p>Size: 700 MB</p>
+    </div>
+    <div class="product-item"><input type="checkbox" class="delete-checkbox">
+      <p>JVC200123</p><p>Acme DISC</p><p>1.00 $</p><p>Size: 700 MB</p>
+    </div>
+    <div class="product-item"><input type="checkbox" class="delete-checkbox">
+      <p>JVC200123</p><p>Acme DISC</p><p>1.00 $</p><p>Size: 700 MB</p>
+    </div>
+    <div class="product-item"><input type="checkbox" class="delete-checkbox">
+      <p>JVC200123</p><p>Acme DISC</p><p>1.00 $</p><p>Size: 700 MB</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="product-item"><input type="checkbox" class="delete-checkbox">
+      <p>GGWP0007</p><p>War and Peace</p><p>20.00 $</p><p>Weight: 2KG</p>
+    </div>
+    <div class="product-item"><input type="checkbox" class="delete-checkbox">
+      <p>GGWP0007</p><p>War and Peace</p><p>20.00 $</p><p>Weight: 2KG</p>
+    </div>
+    <div class="product-item"><input type="checkbox" class="delete-checkbox">
+      <p>GGWP0007</p><p>War and Peace</p><p>20.00 $</p><p>Weight: 2KG</p>
+    </div>
+    <div class="product-item"><input type="checkbox" class="delete-checkbox">
+      <p>GGWP0007</p><p>War and Peace</p><p>20.00 $</p><p>Weight: 2KG</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="product-item"><input type="checkbox" class="delete-checkbox">
+      <p>TR120555</p><p>Chair</p><p>40.00 $</p><p>Dimension: 24x45x15</p>
+    </div>
+    <div class="product-item"><input type="checkbox" class="delete-checkbox">
+      <p>TR120555</p><p>Chair</p><p>40.00 $</p><p>Dimension: 24x45x15</p>
+    </div>
+    <div class="product-item"><input type="checkbox" class="delete-checkbox">
+      <p>TR120555</p><p>Chair</p><p>40.00 $</p><p>Dimension: 24x45x15</p>
+    </div>
+    <div class="product-item"><input type="checkbox" class="delete-checkbox">
+      <p>TR120555</p><p>Chair</p><p>40.00 $</p><p>Dimension: 24x45x15</p>
+    </div>
+  </div>
+
+    <hr>
+  <div class="footer">
+    Scandiweb Test assignment
+  </div>
+
+  <script src="script.js" defer></script>
+
+<?php
+$pdo = new PDO('mysql:host=192.168.56.0;dbname=test', "root", "root");
+$products = $pdso->query("SELECT * FROM products");
+
+var_dump($products->fetchALL( ));
+?>
+</body>
+
+</html>
